@@ -12,6 +12,10 @@ type
     GroupBox1: TGroupBox;
     Button1: TButton;
     Button2: TButton;
+    Label1: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
