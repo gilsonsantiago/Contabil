@@ -1,7 +1,7 @@
 object dModulo: TdModulo
   OldCreateOrder = False
-  Height = 379
-  Width = 654
+  Height = 445
+  Width = 516
   object Conexao: TADOConnection
     Left = 32
     Top = 40

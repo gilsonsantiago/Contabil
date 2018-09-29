@@ -23,8 +23,6 @@ object sisContabil: TsisContabil
     BevelOuter = bvLowered
     Caption = ' '
     TabOrder = 0
-    ExplicitTop = 208
-    ExplicitWidth = 185
     object Button1: TButton
       Left = 181
       Top = 6
@@ -51,7 +49,6 @@ object sisContabil: TsisContabil
     Height = 137
     Align = alClient
     TabOrder = 1
-    ExplicitHeight = 207
     object Label1: TLabel
       Left = 24
       Top = 43

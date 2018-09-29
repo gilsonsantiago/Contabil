@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Menus;
+  Dialogs, StdCtrls, ExtCtrls, dbconfiguracao,   Menus;
 
 type
   TsisContabil = class(TForm)
@@ -35,6 +35,14 @@ uses sisCotabil;
 
 procedure TsisContabil.Button1Click(Sender: TObject);
 begin
+
+
+      conectar();
+
+
+
+
+
       frmContabilidade.ShowModal;
 end;
 

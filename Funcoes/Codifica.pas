@@ -1,15 +1,36 @@
+
+{****************************************************************************
+ *  Modulo de Criptografia e descriptografia
+ *  Autor: Gilson Santiago
+ *  Atualizada em Data:  29 de setembro de 2018
+ ********************************************************}
+
 unit Codifica;
 
 interface
 
 uses sysutils;
 
+
+{****************************************************************************
+ *  Publicação das funções
+ *  Autor: Gilson Santiago
+ *  Data:  29 de setembro de 2018
+ ********************************************************}
+
+
  function Encripta (Texto: String):String;
  function Decripta (Texto: String):String;
 
 implementation
 
- // Função de encriptação de string
+
+{****************************************************************************
+ *  Função de encriptação de string
+ *  Autor: Gilson Santiago
+ *  Data:  29 de setembro de 2018
+ ********************************************************}
+
  function Encripta(Texto: String):String;
  var
   r : string;
@@ -19,8 +40,14 @@ implementation
    r := r + chr(Ord(Texto[i]) + i + 115);
     result:= r;
  end;
+ 
+ 
+ {****************************************************************************
+ *  Função de decriptação de string
+ *  Autor: Gilson Santiago
+ *  Data:  29 de setembro de 2018
+ ********************************************************}
 
-  // Função de decriptação de string
  function Decripta(Texto: String):String;
  var
   w : string;

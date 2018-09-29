@@ -1,5 +1,5 @@
 # Contabil
 Contabilidade Pessoal
 
-Este sistema tem como objetivo controlar as finanças pessoais e a contabilidade Pessoal Domestica utilizando as partidas dobradas.
+Este sistema tem como objetivo controlar as finanças e a contabilidade Pessoal, controle de contas Domestica utilizando as partidas dobradas.
 

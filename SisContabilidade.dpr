@@ -4,7 +4,8 @@ uses
   Forms,
   uContabil in 'uContabil.pas' {sisContabil},
   sisCotabil in 'Telas\sisCotabil.pas' {frmContabilidade},
-  modulo in 'Funcoes\modulo.pas' {dModulo: TDataModule};
+  modulo in 'Funcoes\modulo.pas' {dModulo: TDataModule},
+  DBconfiguracao in 'Funcoes\DBconfiguracao.pas';
 
 {$R *.res}
 
