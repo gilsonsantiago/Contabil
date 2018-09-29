@@ -16,6 +16,17 @@ uses
 type
   TdModulo = class(TDataModule)
     Conexao: TADOConnection;
+    QUsuarios: TADOQuery;
+    DSUsuario: TDataSource;
+    QUsuariosidusuario: TAutoIncField;
+    QUsuariosnome: TWideStringField;
+    QUsuariosusuario: TWideStringField;
+    QUsuariosstatus: TWideStringField;
+    QUsuariossenha: TWideStringField;
+    QUsuariosdataCadastro: TDateTimeField;
+    QUsuariosnivel: TWideStringField;
+    QUsuariosano: TIntegerField;
+    QUsuariosmes: TIntegerField;
   private
     { Private declarations }
   public

@@ -5,7 +5,9 @@ uses
   uContabil in 'uContabil.pas' {sisContabil},
   sisCotabil in 'Telas\sisCotabil.pas' {frmContabilidade},
   modulo in 'Funcoes\modulo.pas' {dModulo: TDataModule},
-  DBconfiguracao in 'Funcoes\DBconfiguracao.pas';
+  DBconfiguracao in 'Funcoes\DBconfiguracao.pas',
+  Usuarios in 'Classes\Usuarios.pas',
+  AnoMes in 'Classes\AnoMes.pas';
 
 {$R *.res}
 
