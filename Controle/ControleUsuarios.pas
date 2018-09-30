@@ -12,7 +12,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Classes, Dialogs, StdCtrls,
-  ExtCtrls, modulo, usuarios;
+  ExtCtrls, modulo, pdatas, usuarios;
 
  {****************************************************************************
  *  Publicação das funções
@@ -22,6 +22,7 @@ uses
 
 function  autenticarusuario ( usu : tusuarios) : integer;
 procedure consultaUsuarios  ( idusuario : integer);
+function  gravarUsuario     ( usu : tusuarios) : boolean;
 
 
 
@@ -98,5 +99,44 @@ begin
    
 
 end;
+
+{****************************************************************************
+ *  Gravar os dados dos usuarios
+ *  usando:   parametro 0 =  todos registro  -  1 - uma busca do codigo
+ *  Autor: Gilson Santiago
+ *  Data:  30 de setembro de 2018
+ ********************************************************}
+
+function  gravarUsuario     ( usu : tusuarios) : boolean;
+begin
+  
+   try
+
+     dmodulo.ExecutaSQLc.CommandText := 'insert into usuarios (nome,  ' +
+                                        'usuario, senha, datacadastro)' +
+                                        'VALUES (:nnome, :nusuario,   ' +
+                                        ':nsenha, :ndatacadastro) ';
+
+     dmodulo.ExecutaSQLc.Parameters.ParamByName('nnome').value := usu.nome;
+
+     dmodulo.ExecutaSQLc.Parameters.ParamByName('nusuario').value := usu.usuario;
+
+     dmodulo.ExecutaSQLc.Parameters.ParamByName('nsenha').value := usu.senha;
+
+     if (usu.datacadastro = '') then
+        dmodulo.ExecutaSQLc.Parameters.ParamByName('ndatacadastro').value := usu.datacadastro;
+
+     dmodulo.ExecutaSQLc.execute;
+
+     result := true;
+
+   except
+
+      result := false;
+
+   end;
+
+end;
+
 
 end.

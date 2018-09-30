@@ -11,7 +11,9 @@ uses
   CadastroUsuarios in 'Telas\CadastroUsuarios.pas' {frmCadastro},
   Competencia in 'Telas\Competencia.pas' {frmCompetencia},
   inclusaoUsuario in 'Telas\inclusaoUsuario.pas' {adicionarUsuario},
-  ControleUsuarios in 'Controle\ControleUsuarios.pas';
+  ControleUsuarios in 'Controle\ControleUsuarios.pas',
+  pdatas in 'Funcoes\pdatas.pas',
+  numescrito in 'Funcoes\numescrito.pas';
 
 {$R *.res}
 

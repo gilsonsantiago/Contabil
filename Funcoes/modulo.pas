@@ -35,6 +35,7 @@ type
     qCadUsuarionome: TWideStringField;
     qCadUsuariousuario: TWideStringField;
     qCadUsuariodataCadastro: TDateTimeField;
+    ExecutaSQLc: TADOCommand;
   private
     { Private declarations }
   public

@@ -127,4 +127,10 @@ object dModulo: TdModulo
     Left = 384
     Top = 40
   end
+  object ExecutaSQLc: TADOCommand
+    Connection = Conexao
+    Parameters = <>
+    Left = 384
+    Top = 128
+  end
 end
