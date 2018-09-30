@@ -28,10 +28,10 @@ implementation
 Function lerNomeBanco  : string;
 var
  arquivo : tinifile;
- caminho, enderecohost : string;
+ caminho, enderecoHost : string;
 begin
 
-   ARQUIVO := tinifile.Create('');
+   arquivo := tinifile.Create('');
 
    try
 
@@ -60,10 +60,10 @@ end;
 Function lerEndereco  : string;
 var
  arquivo : tinifile;
- caminho, enderecohost : string;
+ caminho, enderecoHost : string;
 begin
 
-   ARQUIVO := tinifile.Create('');
+   arquivo := tinifile.Create('');
 
    try
 
@@ -71,7 +71,7 @@ begin
 
      enderecohost:= arquivo.ReadString('enderecohost', 'caminhohost', '' );
 
-     result := enderecohost;
+     result := enderecoHost;
 
      arquivo.Free;
 
@@ -115,9 +115,9 @@ end;
 
  begin
 
-   bancodados := '';
+   bancoDados := '';
 
-   bancodados := dbconfiguracao.lerEndereco() + '\DB\' +
+   bancoDados := dbconfiguracao.lerEndereco() + '\DB\' +
                  dbconfiguracao.lerNomeBanco();
 
    dmodulo.Conexao.Connected := false;
@@ -126,21 +126,15 @@ end;
 
    dmodulo.Conexao.Provider := 'Microsoft.Jet.OLEDB.4.0';
 
-   dmodulo.Conexao.ConnectionString :=  bancodados;
+   dmodulo.Conexao.ConnectionString :=  bancoDados;
 
    dmodulo.Conexao.Connected := true ;
 
 
    if dmodulo.Conexao.Connected = true then
 
-      begin
-
-        showmessage (bancodados);
-
-        result := true;
-
-      end
-
+        result := true
+     
      else
 
         result := false;

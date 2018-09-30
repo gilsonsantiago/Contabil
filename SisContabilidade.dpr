@@ -8,7 +8,8 @@ uses
   DBconfiguracao in 'Funcoes\DBconfiguracao.pas',
   Usuarios in 'Classes\Usuarios.pas',
   AnoMes in 'Classes\AnoMes.pas',
-  ControleUsuarios in 'Controle\ControleUsuarios.pas';
+  ControleUsuarios in 'Controle\ControleUsuarios.pas',
+  CadastroUsuarios in 'Telas\CadastroUsuarios.pas' {frmCadastro};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.CreateForm(TsisContabil, sisContabil);
   Application.CreateForm(TfrmContabilidade, frmContabilidade);
   Application.CreateForm(TdModulo, dModulo);
+  Application.CreateForm(TfrmCadastro, frmCadastro);
   Application.Run;
 end.

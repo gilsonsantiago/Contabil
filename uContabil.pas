@@ -84,6 +84,8 @@ begin
 
          showmessage ('Usuário Autenticado...');
 
+
+
          frmContabilidade.ShowModal;
 
          siscontabil.Close;

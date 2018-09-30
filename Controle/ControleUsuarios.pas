@@ -1,4 +1,4 @@
-
+﻿
 {****************************************************************************
  *  Model de Controle de Usuarios
  *  Autor: Gilson Santiago
@@ -14,7 +14,11 @@ uses
   Windows, Messages, SysUtils, Classes, Dialogs, StdCtrls,
   ExtCtrls, modulo, usuarios;
 
-  
+ {****************************************************************************
+ *  Publicação das funções
+ *  Autor: Gilson Santiago
+ *  Data:  30 de setembro de 2018
+ ********************************************************} 
 
 function autenticarusuario ( usu : tusuarios) : integer;
 
@@ -22,11 +26,14 @@ function autenticarusuario ( usu : tusuarios) : integer;
 
 implementation
 
-
+{****************************************************************************
+ *  Autenticação do Usuários.
+ *  Autor: Gilson Santiago
+ *  Data:  30 de setembro de 2018
+ ********************************************************}
 
 function autenticarusuario ( usu : tusuarios) : integer;
-var
-  contador : integer;
+
 begin
 
      dmodulo.QUsuarios.Close;
@@ -40,10 +47,8 @@ begin
      dmodulo.QUsuarios.Parameters.ParamByName('nsenha').value   := usu.senha;
 
      dmodulo.QUsuarios.Open;
-
-     contador := dmodulo.QUsuarios.RecordCount();
-
-     result :=  contador;
+      
+     result := (dmodulo.QUsuarios.RecordCount);
 
 
 end;

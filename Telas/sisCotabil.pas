@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, StdCtrls, ExtCtrls;
+  Dialogs, Menus, StdCtrls, Usuarios, ExtCtrls, Grids, DBGrids;
 
 type
   TfrmContabilidade = class(TForm)
@@ -20,6 +20,7 @@ type
     PlanodeContas1: TMenuItem;
     Movimento1: TMenuItem;
     Lancamentos1: TMenuItem;
+    procedure Usurios1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,9 +29,17 @@ type
 
 var
   frmContabilidade: TfrmContabilidade;
+  dadosUsuarios : tusuarios;
 
 implementation
 
+uses modulo, AnoMes, CadastroUsuarios;
+
 {$R *.dfm}
+
+procedure TfrmContabilidade.Usurios1Click(Sender: TObject);
+begin
+      frmCadastro.ShowModal;
+end;
 
 end.

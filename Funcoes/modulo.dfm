@@ -32,7 +32,8 @@ object dModulo: TdModulo
         Value = Null
       end>
     SQL.Strings = (
-      '')
+      ''
+      'SELECT * FROM USUARIOS')
     Left = 32
     Top = 104
     object QUsuariosidusuario: TAutoIncField
