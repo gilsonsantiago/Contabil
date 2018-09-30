@@ -7,7 +7,8 @@ uses
   modulo in 'Funcoes\modulo.pas' {dModulo: TDataModule},
   DBconfiguracao in 'Funcoes\DBconfiguracao.pas',
   Usuarios in 'Classes\Usuarios.pas',
-  AnoMes in 'Classes\AnoMes.pas';
+  AnoMes in 'Classes\AnoMes.pas',
+  ControleUsuarios in 'Controle\ControleUsuarios.pas';
 
 {$R *.res}
 

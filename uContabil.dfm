@@ -2,7 +2,7 @@ object sisContabil: TsisContabil
   Left = 0
   Top = 0
   Caption = 'Acesso a Contabilidade'
-  ClientHeight = 333
+  ClientHeight = 148
   ClientWidth = 353
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +16,7 @@ object sisContabil: TsisContabil
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 292
+    Top = 107
     Width = 353
     Height = 41
     Align = alBottom
@@ -46,7 +46,7 @@ object sisContabil: TsisContabil
     Left = 0
     Top = 0
     Width = 353
-    Height = 292
+    Height = 107
     Align = alClient
     TabOrder = 1
     object Label1: TLabel
@@ -68,6 +68,7 @@ object sisContabil: TsisContabil
       Top = 24
       Width = 225
       Height = 21
+      CharCase = ecUpperCase
       TabOrder = 0
       Text = ' '
     end
@@ -79,19 +80,6 @@ object sisContabil: TsisContabil
       PasswordChar = '*'
       TabOrder = 1
       Text = ' '
-    end
-    object DBGrid1: TDBGrid
-      Left = 16
-      Top = 136
-      Width = 321
-      Height = 120
-      DataSource = dModulo.DSUsuario
-      TabOrder = 2
-      TitleFont.Charset = DEFAULT_CHARSET
-      TitleFont.Color = clWindowText
-      TitleFont.Height = -11
-      TitleFont.Name = 'Tahoma'
-      TitleFont.Style = []
     end
   end
 end

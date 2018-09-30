@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, dbconfiguracao,   Menus, Grids, DBGrids;
+  Dialogs, StdCtrls, ExtCtrls, dbconfiguracao, Menus, Grids, DBGrids;
 
 type
   TsisContabil = class(TForm)
@@ -16,7 +16,6 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Label2: TLabel;
-    DBGrid1: TDBGrid;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -30,11 +29,14 @@ var
 
 implementation
 
-uses sisCotabil, modulo;
+uses sisCotabil, modulo, ControleUsuarios, Usuarios;
 
 {$R *.dfm}
 
 procedure TsisContabil.Button1Click(Sender: TObject);
+var 
+  logar : Tusuarios;
+  arqusu : integer;
 begin
 
    if conectar() then
@@ -59,27 +61,17 @@ begin
 
      end;
 
-     //  será modificado para função
+     logar := tusuarios.Create();
 
-    {
-     dmodulo.QUsuarios.Close;
-     dmodulo.QUsuarios.Open;
+     logar.usuario := sisContabil.Edit1.text;
+	 
+     logar.senha   := sisContabil.Edit2.Text;
 
+     arqusu := autenticarusuario (logar);
 
-     dmodulo.QUsuarios.SQL.Add('SELECT * FROM USUARIOS WHERE usuario = :nusuario and senha = :nsenha');
-
-     dmodulo.QUsuarios.Parameters.ParamByName('nusuario').Value := sisContabil.Edit1.Text;
-
-     dmodulo.QUsuarios.Parameters.ParamByName('nsenha').value   := sisContabil.Edit2.Text;
-
-     dmodulo.QUsuarios.ExecSQL;
-
-     dmodulo.QUsuarios.Open;      }
-
-
-
-    { if (dmodulo.QUsuarios.RecordCount < 0 ) then
+     if ( arqusu < 0 ) then
        begin
+       
          showmessage ('Usuário não Cadastrado...');
 
          sisContabil.Close;
@@ -89,13 +81,15 @@ begin
      else
      
       begin
+
          showmessage ('Usuário Autenticado...');
 
          frmContabilidade.ShowModal;
 
          siscontabil.Close;
 
-      end;     }
+      end;
+
 
 end;
 
