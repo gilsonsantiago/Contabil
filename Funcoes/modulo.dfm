@@ -75,4 +75,56 @@ object dModulo: TdModulo
     Left = 32
     Top = 168
   end
+  object qUsuario: TADOQuery
+    Connection = Conexao
+    Parameters = <>
+    Left = 632
+    Top = 16
+  end
+  object qCadUsuario: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      '')
+    Left = 144
+    Top = 104
+    object qCadUsuarioidusuario: TAutoIncField
+      Alignment = taCenter
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'idusuario'
+      ReadOnly = True
+    end
+    object qCadUsuarionome: TWideStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'nome'
+      Size = 100
+    end
+    object qCadUsuariousuario: TWideStringField
+      DisplayLabel = 'Usu'#225'rio'
+      FieldName = 'usuario'
+      Size = 40
+    end
+    object qCadUsuariodataCadastro: TDateTimeField
+      Alignment = taCenter
+      DisplayLabel = 'Data do Cadastro'
+      FieldName = 'dataCadastro'
+    end
+  end
+  object DSCadUsuario: TDataSource
+    DataSet = qCadUsuario
+    Left = 144
+    Top = 168
+  end
+  object ConexaoDesenvolve: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Aplicacao\Contab' +
+      'il\DB\Contabil.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 384
+    Top = 40
+  end
 end

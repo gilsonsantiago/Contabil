@@ -20,7 +20,8 @@ uses
  *  Data:  30 de setembro de 2018
  ********************************************************} 
 
-function autenticarusuario ( usu : tusuarios) : integer;
+function  autenticarusuario ( usu : tusuarios) : integer;
+procedure consultaUsuarios  ( idusuario : integer);
 
 
 
@@ -50,6 +51,51 @@ begin
       
      result := (dmodulo.QUsuarios.RecordCount);
 
+
+end;
+
+
+{****************************************************************************
+ *  Consultar o Banco de Dados
+ *  usando:   parametro 0 =  todos registro  -  1 - uma busca do codigo
+ *  Autor: Gilson Santiago
+ *  Data:  30 de setembro de 2018
+ ********************************************************}
+
+procedure consultaUsuarios  ( idusuario : integer);
+
+begin
+
+   if (idusuario = 0)  then
+
+   begin
+
+      dmodulo.qCadUsuario.close;
+
+      dmodulo.qCadUsuario.sql.clear;
+
+      dmodulo.qCadUsuario.sql.add('SELECT * FROM usuarios ');
+
+      dmodulo.qCadUsuario.open;
+
+   end
+
+  else
+
+   begin
+
+      dmodulo.qCadUsuario.close;
+
+      dmodulo.qCadUsuario.sql.clear;
+
+      dmodulo.qCadUsuario.sql.add('SELECT * FROM usuarios WHERE idusuario = :nidusuario');
+
+      dmodulo.qCadUsuario.Parameters.ParamByName('nidusuario').value := idusuario;
+
+      dmodulo.qCadUsuario.open;
+
+   end;
+   
 
 end;
 

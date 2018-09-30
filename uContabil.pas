@@ -72,7 +72,7 @@ begin
      if ( arqusu < 0 ) then
        begin
        
-         showmessage ('Usuário não Cadastrado...');
+         showmessage ('Usuário não cadastrado...');
 
          sisContabil.Close;
 
@@ -82,7 +82,7 @@ begin
      
       begin
 
-         showmessage ('Usuário Autenticado...');
+         showmessage ('Usuário autenticado...');
 
 
 

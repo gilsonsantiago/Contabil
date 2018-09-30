@@ -27,6 +27,14 @@ type
     QUsuariosnivel: TWideStringField;
     QUsuariosano: TIntegerField;
     QUsuariosmes: TIntegerField;
+    qUsuario: TADOQuery;
+    qCadUsuario: TADOQuery;
+    DSCadUsuario: TDataSource;
+    ConexaoDesenvolve: TADOConnection;
+    qCadUsuarioidusuario: TAutoIncField;
+    qCadUsuarionome: TWideStringField;
+    qCadUsuariousuario: TWideStringField;
+    qCadUsuariodataCadastro: TDateTimeField;
   private
     { Private declarations }
   public

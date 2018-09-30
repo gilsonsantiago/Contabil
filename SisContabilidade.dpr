@@ -8,8 +8,10 @@ uses
   DBconfiguracao in 'Funcoes\DBconfiguracao.pas',
   Usuarios in 'Classes\Usuarios.pas',
   AnoMes in 'Classes\AnoMes.pas',
-  ControleUsuarios in 'Controle\ControleUsuarios.pas',
-  CadastroUsuarios in 'Telas\CadastroUsuarios.pas' {frmCadastro};
+  CadastroUsuarios in 'Telas\CadastroUsuarios.pas' {frmCadastro},
+  Competencia in 'Telas\Competencia.pas' {frmCompetencia},
+  inclusaoUsuario in 'Telas\inclusaoUsuario.pas' {adicionarUsuario},
+  ControleUsuarios in 'Controle\ControleUsuarios.pas';
 
 {$R *.res}
 
@@ -19,5 +21,7 @@ begin
   Application.CreateForm(TfrmContabilidade, frmContabilidade);
   Application.CreateForm(TdModulo, dModulo);
   Application.CreateForm(TfrmCadastro, frmCadastro);
+  Application.CreateForm(TfrmCompetencia, frmCompetencia);
+  Application.CreateForm(TadicionarUsuario, adicionarUsuario);
   Application.Run;
 end.

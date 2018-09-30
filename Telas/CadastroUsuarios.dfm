@@ -23,22 +23,21 @@ object frmCadastro: TfrmCadastro
     BevelOuter = bvLowered
     Caption = ' '
     TabOrder = 0
-    ExplicitTop = 272
-    ExplicitWidth = 185
     object Button1: TButton
       Left = 8
       Top = 8
       Width = 75
       Height = 25
-      Caption = 'Button1'
+      Caption = 'Incluir'
       TabOrder = 0
+      OnClick = Button1Click
     end
     object Button2: TButton
       Left = 88
       Top = 8
       Width = 75
       Height = 25
-      Caption = 'Button2'
+      Caption = 'Alterar'
       TabOrder = 1
     end
     object Button3: TButton
@@ -46,7 +45,7 @@ object frmCadastro: TfrmCadastro
       Top = 8
       Width = 75
       Height = 25
-      Caption = 'Button3'
+      Caption = 'Excluir'
       TabOrder = 2
     end
     object Button4: TButton
@@ -54,8 +53,9 @@ object frmCadastro: TfrmCadastro
       Top = 8
       Width = 75
       Height = 25
-      Caption = 'Button4'
+      Caption = 'Consultar'
       TabOrder = 3
+      OnClick = Button4Click
     end
     object Button5: TButton
       Left = 600
@@ -79,5 +79,40 @@ object frmCadastro: TfrmCadastro
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object DBGrid2: TDBGrid
+    Left = 0
+    Top = 0
+    Width = 684
+    Height = 273
+    Align = alClient
+    DataSource = dModulo.DSCadUsuario
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'idusuario'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'usuario'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'dataCadastro'
+        Visible = True
+      end>
   end
 end
