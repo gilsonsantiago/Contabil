@@ -36,9 +36,13 @@ implementation
   r : string;
   i : integer;
  begin
+ 
   For i := 1 to Length(texto) do
+  
    r := r + chr(Ord(Texto[i]) + i + 115);
-    result:= r;
+   
+   result:= r;
+   
  end;
  
  
@@ -53,9 +57,14 @@ implementation
   w : string;
   i : integer;
  begin
+ 
   FOR i := 1 TO Length(texto) do
+  
     w := w + chr( Ord(texto[i]) - i - 115 );
+	
     result:= w;
+	
  end;
+ 
 end.
  

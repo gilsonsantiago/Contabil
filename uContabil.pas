@@ -69,7 +69,7 @@ begin
 
      arqusu := autenticarusuario (logar);
 
-     if ( arqusu < 0 ) then
+     if ( arqusu < 1 ) then
 
        begin
        

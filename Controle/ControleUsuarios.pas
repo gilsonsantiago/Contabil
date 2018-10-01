@@ -20,12 +20,12 @@ uses
  *  Data:  30 de setembro de 2018
  ********************************************************} 
 
-function  autenticarusuario     ( usu : tusuarios) : integer;
-function  consultaUsuarios      ( idusuario : integer): boolean;
-function  gravarUsuario         ( usu : tusuarios) : boolean;
-function  alterarUsuario        ( usu : tusuarios) : boolean;
-function  excluirUsuario        ( idusu : integer) : boolean;
-function consultaLoginUsuarios  ( login : string) : boolean;
+function  autenticarusuario      ( usu : tusuarios) : integer;
+function  consultaUsuarios       ( idusuario : integer): boolean;
+function  gravarUsuario          ( usu : tusuarios) : boolean;
+function  alterarUsuario         ( usu : tusuarios) : boolean;
+function  excluirUsuario         ( idusu : integer) : boolean;
+function  consultaLoginUsuarios  ( login : string)  : integer;
 
 
 
@@ -41,6 +41,8 @@ function autenticarusuario ( usu : tusuarios) : integer;
 
 begin
 
+  try
+
      dmodulo.QUsuarios.Close;
 
      dmodulo.QUsuarios.SQL.Clear;
@@ -55,6 +57,11 @@ begin
       
      result := (dmodulo.QUsuarios.RecordCount);
 
+  except
+     
+	 result := 0;
+	  
+  end;  
 
 end;
 
@@ -65,13 +72,13 @@ end;
  *  Data:  30 de setembro de 2018
  ********************************************************}
 
-function consultaLoginUsuarios  ( login : string) : boolean;
+function consultaLoginUsuarios  ( login : string) : integer;
 
 begin
 
-    
- try	
-	dmodulo.qCadUsuario.close;
+  try
+
+    dmodulo.qCadUsuario.close;
 
     dmodulo.qCadUsuario.sql.clear;
 
@@ -80,14 +87,14 @@ begin
     dmodulo.qCadUsuario.Parameters.ParamByName('nusuario').value := login;
 
     dmodulo.qCadUsuario.open;
-	
-	result := true;
-	
- except	
- 
-   result := false;
-	  
- end;  
+
+    result :=  dmodulo.qCadUsuario.RecordCount;
+
+  except
+
+      result :=  0;
+
+  end;
 
 end;
 
@@ -165,13 +172,9 @@ begin
 
      dmodulo.ExecutaSQLc.Parameters.ParamByName('nsenha').value := usu.senha;
 
- {    if (usu.datacadastro = '') then
-        dmodulo.ExecutaSQLc.Parameters.ParamByName('ndatacadastro').value := usu.datacadastro;
-       }
-
      dmodulo.ExecutaSQLc.execute;
 
-     result := true;
+      result := true;
 
    except
 

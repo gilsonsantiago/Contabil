@@ -33,6 +33,7 @@ var
 mPos,mPont,mTam,mNr,mCont:integer;
 mStr:string;
 begin
+
    mTam:=Length(mCad);
   
   if mTam>=mMax then
@@ -42,8 +43,11 @@ begin
     else
 	
      mStr:='';
+
      mCont:=0;
+
      mPont:=1;
+
      mNr:=mMax-mTam;
 	 
      while mCont<mNr do
@@ -98,11 +102,13 @@ const
 var
   Index: byte;
 begin
+
 	Index:=1;
 	
 	while (Index <= Length(Search)) and not (Search[Index] in BlackSpace) do 
 	
 	begin
+
 		Index:=Index + 1;
 		   
 	end;
@@ -170,6 +176,7 @@ var
 	I: integer; 
 	S: string; 
 begin
+
 	S := ''; 
 	
 	for I := 1 To Length(Texto) Do 
@@ -201,6 +208,7 @@ var
 	Temp_01 : string;
 	Temp_03, conta: Integer;
 begin
+
 	Conta := 0;
 	
 	Temp_03 := length(sTexto);

@@ -45,24 +45,43 @@ var Ano, Mes, Dia : Word;
 begin
   // Retorna a data por extenso
   DecodeDate(Data, Ano, Mes, Dia);
+  
   Case Mes of
+  
     1  : Mes1 := 'Janeiro';
+	
     2  : Mes1 := 'Fevereiro';
+	
     3  : Mes1 := 'Março';
+	
     4  : Mes1 := 'Abril';
+	
     5  : Mes1 := 'Maio';
+	
     6  : Mes1 := 'Junho';
+	
     7  : Mes1 := 'Julho';
+	
     8  : Mes1 := 'Agosto';
+	
     9  : Mes1 := 'Setembro';
+	
     10 : Mes1 := 'Outubro';
+	
     11 : Mes1 := 'Novembro';
+	
     12 : Mes1 := 'Dezembro';
+	
   end;
+  
   if (Dia = 1) then
+  
     Result := IntToStr(Dia)+'º de '+Mes1+' de '+IntToStr(Ano)
+	
   else begin
+  
     Result := IntToStr(Dia)+' de '+Mes1+' de '+IntToStr(Ano);
+	
   end;
 
 end;
@@ -80,19 +99,33 @@ var Ano, Mes, Dia : Word;
 begin
   // Retorna a data por extenso
   DecodeDate(Data, Ano, Mes, Dia);
+  
   Case Mes of
+  
     1  : Mes1 := 'Janeiro';
+	
     2  : Mes1 := 'Fevereiro';
+	
     3  : Mes1 := 'Março';
+	
     4  : Mes1 := 'Abril';
+	
     5  : Mes1 := 'Maio';
+	
     6  : Mes1 := 'Junho';
+	
     7  : Mes1 := 'Julho';
+	
     8  : Mes1 := 'Agosto';
+	
     9  : Mes1 := 'Setembro';
+	
     10 : Mes1 := 'Outubro';
+	
     11 : Mes1 := 'Novembro';
+	
     12 : Mes1 := 'Dezembro';
+	
   end;
 
   Result := diaextenso (data)+ ' de '+Mes1+' de ' + anoextenso(data);
@@ -113,16 +146,23 @@ Ano, Mes, Dia : Word;
 mes1 : string;
 begin
   // Retorna a data por extenso
+  
   DecodeDate(Data, Ano, Mes, Dia);
 
   if (mes < 10) then
+  
      mes1 := '0' + inttostr(mes)
+	 
     else
+	
      mes1 := inttostr(mes);
 
   if (Dia < 10) then
+  
     Result := '0' + IntToStr(Dia) + mes1 + IntToStr(Ano)
+	
    else
+   
     Result :=  IntToStr(Dia) + mes1 + IntToStr(Ano);
 
   end;
@@ -139,9 +179,13 @@ begin
 FUNCTION datanumero ( data1: string) : string;
 begin
   if length(data1) <> 10   then
+  
      result := '00000000'
+	 
   else
+  
     result := copy (data1,1,2) + copy (data1, 4, 2) + copy (data1, 7,4);
+	
 end;
 
 FUNCTION valida_data ( data1: string) : boolean;
@@ -151,90 +195,130 @@ begin
     result := true ;
 
     ndia := strtoint(copy (data1,1,2));
+	
     nmes := strtoint(copy (data1,4,2));
 
   if nmes > 12 then
+  
      result := false
+	 
    else
+   
     begin
 
     case nmes of
 
     1:
       begin
+	  
         if ndia > 31 then
+		
            result := false;
+		   
       end;
 
     2:
       begin
+	  
         if ndia > 29 then
+		
            result := false;
+		   
       end;
 
     3:
       begin
+	  
         if ndia > 31 then
+		
            result := false;
+		   
       end;
 
     4:
       begin
+	  
          if ndia >30 then
+		 
             result := false;
+			
       end;
 
     5:
       begin
+	  
         if ndia > 31 then
+		
             result := false;
+			
       end;
 
     6:
       begin
+	  
          if ndia >30 then
+		 
             result := false;
+			
       end;
 
     7:
       begin
+	  
         if ndia > 31 then
+		
            result := false;
+		   
       end;
 
     8:
       begin
+	  
         if ndia > 31 then
+		
            result := false;
+		   
       end;
 
 
     9:
       begin
+	  
          if ndia >30 then
+		 
             result := false;
+			
       end;
 
     10:
       begin
+	  
         if ndia > 31 then
+		
            result := false;
+		   
       end;
-
 
     11:
       begin
+	  
          if ndia >30 then
+		 
             result := false;
+			
       end;
 
     12:
       begin
+	  
         if ndia > 31 then
+		
            result := false;
+		   
       end;
 
      end  //   case
+	 
    end
 end;
 
@@ -249,11 +333,17 @@ FUNCTION datastrnum ( data: tdatetime) : string;
 var
   data1 : string;
 begin
+
   data1 := datetostr(data);
+  
   if length(data1) <> 10 then
+  
      result := '00000000'
+	 
   else
+  
     result := copy (data1,1,2) + copy (data1, 4, 2) + copy (data1, 7,4);
+	
 end;
 
 
@@ -318,10 +408,6 @@ begin
 end;
  //--------------------
  
- 
- 
- 
- 
- 
+
 
 end.   // Fim da Unit

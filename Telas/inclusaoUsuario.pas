@@ -40,11 +40,18 @@ implementation
 procedure TadicionarUsuario.Button1Click(Sender: TObject);
 var
   usu : tusuarios;
+  flag : integer;
 begin
 
-   if (consultaLoginUsuarios (adicionarusuario.Edit3.Text)) then
+  flag  := consultaLoginUsuarios (adicionarusuario.Edit3.Text);
 
-      showmessage ('Usuário já cdastrado...')
+  if (flag  > 0 ) then
+
+    begin
+
+      showmessage ('Usuário já cdastrado...');
+
+     end
 
   else
 
@@ -63,10 +70,10 @@ begin
        else
 
            showmessage ('Ocorreu erro na gravação...') ;  // Final do IF
-
-       adicionarUsuario.Close;
-
+       
     end;
+
+    adicionarUsuario.Close;
 
  end;
   
