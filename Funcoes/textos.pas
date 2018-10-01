@@ -9,6 +9,7 @@
 unit textos;
 
 interface
+
 uses sysutils;
 
 function Justifica(mCad:string;mMAx:integer):string;
@@ -247,7 +248,9 @@ begin
 
 	I := Length(S);
 	
-	while (I > 0) and (S[I] <= ' ') do begin
+	while (I > 0) and (S[I] <= ' ') do 
+	
+	begin
 	
 		Dec(I); 
 		
@@ -255,7 +258,9 @@ begin
 	
 	J := 1;
 	
-	while (J < I) and ((S[J] <= ' ') or (S[J] = '0')) do begin
+	while (J < I) and ((S[J] <= ' ') or (S[J] = '0')) do 
+	
+	begin
 	
 		Inc(J); 
 		

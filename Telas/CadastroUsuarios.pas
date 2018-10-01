@@ -20,6 +20,9 @@ type
     procedure Button5Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,13 +35,43 @@ var
 implementation
 
 uses Usuarios, DBconfiguracao, inclusaoUsuario,
-     AnoMes;
+     AnoMes, alterarUsuarios;
 
 {$R *.dfm}
 
 procedure TfrmCadastro.Button1Click(Sender: TObject);
 begin
+
      adicionarUsuario.ShowModal;
+     consultaUsuarios(0) ;
+
+end;
+
+procedure TfrmCadastro.Button2Click(Sender: TObject);
+begin
+     frmAlterarUsuario.ShowModal;
+     consultaUsuarios(0) ;
+     
+end;
+
+procedure TfrmCadastro.Button3Click(Sender: TObject);
+var
+  eclui : boolean;
+begin
+  if messagedlg ('Tem certeza da exclusão ? ', mtconfirmation, [mbYes, mbNo], 0) = mrYes then
+
+     eclui :=  excluirUsuario (dmodulo.qCadUsuarioidusuario.Value);
+
+  if eclui then
+
+     showmessage ('Usuário excluido com sucesso...')
+
+  else
+  
+     showmessage ('Usuário não foi excluido...');
+
+  consultaUsuarios(0) ;
+
 end;
 
 procedure TfrmCadastro.Button4Click(Sender: TObject);
@@ -51,6 +84,11 @@ end;
 procedure TfrmCadastro.Button5Click(Sender: TObject);
 begin
      frmCadastro.Close;
+end;
+
+procedure TfrmCadastro.FormShow(Sender: TObject);
+begin
+      consultaUsuarios(0) ;
 end;
 
 end.

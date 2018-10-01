@@ -70,9 +70,12 @@ begin
      arqusu := autenticarusuario (logar);
 
      if ( arqusu < 0 ) then
+
        begin
        
          showmessage ('Usuário não cadastrado...');
+
+         showmessage (inttostr(arqusu));
 
          sisContabil.Close;
 
@@ -84,7 +87,7 @@ begin
 
          showmessage ('Usuário autenticado...');
 
-
+         showmessage (inttostr(arqusu));
 
          frmContabilidade.ShowModal;
 

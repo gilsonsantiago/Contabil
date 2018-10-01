@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, usuarios, ExtCtrls;
+  Dialogs, StdCtrls, usuarios, modulo, ControleUsuarios, ExtCtrls;
 
 type
   TadicionarUsuario = class(TForm)
@@ -34,7 +34,6 @@ var
 
 implementation
 
-uses ControleUsuarios;
 
 {$R *.dfm}
 
@@ -43,22 +42,32 @@ var
   usu : tusuarios;
 begin
 
-  usu := tusuarios.Create();
+   if (consultaLoginUsuarios (adicionarusuario.Edit3.Text)) then
 
-  usu.nome         := adicionarUsuario.Edit2.Text;
-  usu.usuario      := adicionarUsuario.Edit3.Text;
-  usu.senha        := adicionarUsuario.Edit4.Text;
-
-  if (gravarUsuario( usu)) then
-
-     showmessage ('Dados gravados com sucesso...')
+      showmessage ('Usuário já cdastrado...')
 
   else
-  
-     showmessage ('Ocorreu erro na gravação...') ;
 
-  adicionarUsuario.Close;
+    begin
+
+       usu := tusuarios.Create();
+
+       usu.nome         := adicionarUsuario.Edit2.Text;
+       usu.usuario      := adicionarUsuario.Edit3.Text;
+       usu.senha        := adicionarUsuario.Edit4.Text;
+
+       if (gravarUsuario( usu)) then
+
+           showmessage ('Dados gravados com sucesso...')
+
+       else
+
+           showmessage ('Ocorreu erro na gravação...') ;  // Final do IF
+
+       adicionarUsuario.Close;
+
+    end;
 
  end;
-
+  
 end.

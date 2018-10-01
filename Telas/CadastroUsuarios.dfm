@@ -12,6 +12,7 @@ object frmCadastro: TfrmCadastro
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -33,20 +34,22 @@ object frmCadastro: TfrmCadastro
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 88
-      Top = 8
+      Left = 87
+      Top = 6
       Width = 75
-      Height = 25
+      Height = 27
       Caption = 'Alterar'
       TabOrder = 1
+      OnClick = Button2Click
     end
     object Button3: TButton
       Left = 168
-      Top = 8
+      Top = 6
       Width = 75
-      Height = 25
+      Height = 27
       Caption = 'Excluir'
       TabOrder = 2
+      OnClick = Button3Click
     end
     object Button4: TButton
       Left = 248
@@ -107,11 +110,13 @@ object frmCadastro: TfrmCadastro
       item
         Expanded = False
         FieldName = 'usuario'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'dataCadastro'
+        Width = 64
         Visible = True
       end>
   end
