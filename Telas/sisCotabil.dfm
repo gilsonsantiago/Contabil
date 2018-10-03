@@ -21,9 +21,7 @@ object frmContabilidade: TfrmContabilidade
     Width = 721
     Height = 472
     Align = alClient
-    Caption = ' '
     TabOrder = 1
-    ExplicitHeight = 452
   end
   object Panel1: TPanel
     Left = 0
@@ -33,7 +31,6 @@ object frmContabilidade: TfrmContabilidade
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
-    ExplicitTop = 452
   end
   object MainMenu1: TMainMenu
     Left = 24
@@ -58,6 +55,7 @@ object frmContabilidade: TfrmContabilidade
       end
       object Empresa1: TMenuItem
         Caption = 'Empresa'
+        OnClick = Empresa1Click
       end
       object N2: TMenuItem
         Caption = '-'

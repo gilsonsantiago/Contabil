@@ -31,6 +31,7 @@ type
     Competencias1: TMenuItem;
     N5: TMenuItem;
     procedure Usurios1Click(Sender: TObject);
+    procedure Empresa1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,9 +44,14 @@ var
 
 implementation
 
-uses modulo, AnoMes, CadastroUsuarios;
+uses modulo, AnoMes, CadastroUsuarios, cadastroEmpresas;
 
 {$R *.dfm}
+
+procedure TfrmContabilidade.Empresa1Click(Sender: TObject);
+begin
+      frmCadEmpresas.ShowModal;
+end;
 
 procedure TfrmContabilidade.Usurios1Click(Sender: TObject);
 begin

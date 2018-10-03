@@ -30,9 +30,6 @@ interface
     function getmesatual: integer;
     function getnome: string;
 
-
-  public
-
     procedure setano(const Value: integer);
     procedure setanoatual(const Value: integer);
     procedure setcidade(const Value: string);
