@@ -14,7 +14,8 @@ uses
   ControleUsuarios in 'Controle\ControleUsuarios.pas',
   pdatas in 'Funcoes\pdatas.pas',
   numescrito in 'Funcoes\numescrito.pas',
-  alterarUsuarios in 'Telas\alterarUsuarios.pas' {frmAlterarUsuario};
+  alterarUsuarios in 'Telas\alterarUsuarios.pas' {frmAlterarUsuario},
+  Empresas in 'Classes\Empresas.pas';
 
 {$R *.res}
 
