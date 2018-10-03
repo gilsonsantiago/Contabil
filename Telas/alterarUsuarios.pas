@@ -33,25 +33,47 @@ var
 
 implementation
 
-uses ControleUsuarios;
+uses ControleUsuarios, inclusaoUsuario;
 
 {$R *.dfm}
 
 procedure TfrmAlterarUsuario.Button1Click(Sender: TObject);
 var
   usu : tusuarios;
+  flag : integer;
 begin
 
-  usu := tusuarios.Create();
+   flag  := consultaLoginUsuarios (frmAlterarusuario.Edit3.Text);
 
-  usu.idusuario := strtoint(frmalterarusuario.Edit1.text);
-  usu.nome := (frmalterarusuario.Edit2.Text);
-  usu.usuario := frmalterarusuario.Edit3.Text;
+  if (flag  > 0 ) then
 
-  alterarusuario( usu);
+    begin
 
-  frmalterarusuario.Close;
+      showmessage ('Usuário já cdastrado...');
 
+     end
+
+  else
+
+   begin
+
+     usu := tusuarios.Create();
+
+     usu.idusuario := strtoint(frmalterarusuario.Edit1.text);
+     usu.nome      := (frmalterarusuario.Edit2.Text);
+     usu.usuario   := frmalterarusuario.Edit3.Text;
+
+     if (alterarusuario(usu)) then
+
+        showmessage ('Dados alterados com sucesso...')
+
+     else
+
+        showmessage ('Ocorreu erro na gravação...') ;  // Final do IF
+       
+    end;
+
+    frmalterarusuario.Close;
 
 end;
 

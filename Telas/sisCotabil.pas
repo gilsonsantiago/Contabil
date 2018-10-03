@@ -20,6 +20,16 @@ type
     PlanodeContas1: TMenuItem;
     Movimento1: TMenuItem;
     Lancamentos1: TMenuItem;
+    N3: TMenuItem;
+    SairdoSistema1: TMenuItem;
+    Relatrios1: TMenuItem;
+    CaixaDiario1: TMenuItem;
+    Razo1: TMenuItem;
+    Dirio1: TMenuItem;
+    N4: TMenuItem;
+    Demonstrativo1: TMenuItem;
+    Competencias1: TMenuItem;
+    N5: TMenuItem;
     procedure Usurios1Click(Sender: TObject);
   private
     { Private declarations }

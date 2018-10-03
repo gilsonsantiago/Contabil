@@ -75,8 +75,6 @@ begin
        
          showmessage ('Usuário não cadastrado...');
 
-         showmessage (inttostr(arqusu));
-
          sisContabil.Close;
 
       end
@@ -86,8 +84,6 @@ begin
       begin
 
          showmessage ('Usuário autenticado...');
-
-         showmessage (inttostr(arqusu));
 
          frmContabilidade.ShowModal;
 

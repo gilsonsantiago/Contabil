@@ -69,6 +69,22 @@ object frmCadastro: TfrmCadastro
       TabOrder = 4
       OnClick = Button5Click
     end
+    object Edit1: TEdit
+      Left = 329
+      Top = 8
+      Width = 81
+      Height = 21
+      TabOrder = 5
+    end
+    object Button6: TButton
+      Left = 416
+      Top = 6
+      Width = 121
+      Height = 25
+      Caption = '<-  Digite o C'#243'digo:'
+      TabOrder = 6
+      OnClick = Button6Click
+    end
   end
   object DBGrid1: TDBGrid
     Left = 0

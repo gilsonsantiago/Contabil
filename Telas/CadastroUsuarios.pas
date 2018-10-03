@@ -17,12 +17,15 @@ type
     Button5: TButton;
     DBGrid1: TDBGrid;
     DBGrid2: TDBGrid;
+    Edit1: TEdit;
+    Button6: TButton;
     procedure Button5Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,6 +52,8 @@ end;
 
 procedure TfrmCadastro.Button2Click(Sender: TObject);
 begin
+
+
      frmAlterarUsuario.ShowModal;
      consultaUsuarios(0) ;
      
@@ -84,6 +89,16 @@ end;
 procedure TfrmCadastro.Button5Click(Sender: TObject);
 begin
      frmCadastro.Close;
+end;
+
+procedure TfrmCadastro.Button6Click(Sender: TObject);
+begin
+      if ((frmcadastro.Edit1.Text) = '') then
+         (frmcadastro.Edit1.Text := '0');
+
+         consultaUsuarios(strtoint(frmcadastro.Edit1.Text)) ;
+
+         frmcadastro.Edit1.Text := '';
 end;
 
 procedure TfrmCadastro.FormShow(Sender: TObject);
