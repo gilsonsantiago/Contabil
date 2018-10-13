@@ -17,6 +17,8 @@ type
     Button5: TButton;
     Edit1: TEdit;
     Button6: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,6 +30,19 @@ var
 
 implementation
 
+uses adicionarEmpresas, alterarEmpresas;
+
+
 {$R *.dfm}
+
+procedure TfrmCadEmpresas.Button1Click(Sender: TObject);
+begin
+     frmadicionarempresa.ShowModal;
+end;
+
+procedure TfrmCadEmpresas.Button2Click(Sender: TObject);
+begin
+     frmAlterarEmpresa.ShowModal;
+end;
 
 end.

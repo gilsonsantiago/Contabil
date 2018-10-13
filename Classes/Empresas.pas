@@ -1,3 +1,9 @@
+{****************************************************************************
+ *  Classe de Empresas
+ *  Autor: Gilson Santiago
+ *  Data:  30 de setembro de 2018
+ ********************************************************}
+
 unit Empresas;
 
 interface

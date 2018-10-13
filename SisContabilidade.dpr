@@ -15,8 +15,9 @@ uses
   pdatas in 'Funcoes\pdatas.pas',
   numescrito in 'Funcoes\numescrito.pas',
   alterarUsuarios in 'Telas\alterarUsuarios.pas' {frmAlterarUsuario},
-  Empresas in 'Classes\Empresas.pas',
-  cadastroEmpresas in 'Telas\cadastroEmpresas.pas' {frmCadEmpresas};
+  cadastroEmpresas in 'Telas\cadastroEmpresas.pas' {frmCadEmpresas},
+  adicionarEmpresas in 'Telas\adicionarEmpresas.pas' {frmAdicionarEmpresa},
+  alterarEmpresas in 'Telas\alterarEmpresas.pas' {frmAlterarEmpresa};
 
 {$R *.res}
 
@@ -30,5 +31,7 @@ begin
   Application.CreateForm(TadicionarUsuario, adicionarUsuario);
   Application.CreateForm(TfrmAlterarUsuario, frmAlterarUsuario);
   Application.CreateForm(TfrmCadEmpresas, frmCadEmpresas);
+  Application.CreateForm(TfrmAdicionarEmpresa, frmAdicionarEmpresa);
+  Application.CreateForm(TfrmAlterarEmpresa, frmAlterarEmpresa);
   Application.Run;
 end.

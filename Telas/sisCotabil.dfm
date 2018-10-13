@@ -2,7 +2,7 @@ object frmContabilidade: TfrmContabilidade
   Left = 0
   Top = 0
   Caption = 'Sistema  de Contabilidade Pessoal (Partidas Dobradas).'
-  ClientHeight = 513
+  ClientHeight = 533
   ClientWidth = 721
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,18 +19,20 @@ object frmContabilidade: TfrmContabilidade
     Left = 0
     Top = 0
     Width = 721
-    Height = 472
+    Height = 492
     Align = alClient
     TabOrder = 1
+    ExplicitHeight = 472
   end
   object Panel1: TPanel
     Left = 0
-    Top = 472
+    Top = 492
     Width = 721
     Height = 41
     Align = alBottom
     BevelOuter = bvLowered
     TabOrder = 0
+    ExplicitTop = 472
   end
   object MainMenu1: TMainMenu
     Left = 24

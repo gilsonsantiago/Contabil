@@ -121,6 +121,7 @@ object frmCadastro: TfrmCadastro
       item
         Expanded = False
         FieldName = 'nome'
+        Width = 350
         Visible = True
       end
       item

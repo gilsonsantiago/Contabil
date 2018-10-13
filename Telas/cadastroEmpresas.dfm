@@ -11,6 +11,7 @@ object frmCadEmpresas: TfrmCadEmpresas
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid2: TDBGrid
@@ -36,15 +37,14 @@ object frmCadEmpresas: TfrmCadEmpresas
     BevelOuter = bvLowered
     Caption = ' '
     TabOrder = 1
-    ExplicitTop = 273
-    ExplicitWidth = 684
     object Button1: TButton
-      Left = 8
-      Top = 8
+      Left = 6
+      Top = 6
       Width = 75
       Height = 25
       Caption = 'Incluir'
       TabOrder = 0
+      OnClick = Button1Click
     end
     object Button2: TButton
       Left = 87
@@ -53,6 +53,7 @@ object frmCadEmpresas: TfrmCadEmpresas
       Height = 27
       Caption = 'Alterar'
       TabOrder = 1
+      OnClick = Button2Click
     end
     object Button3: TButton
       Left = 168
