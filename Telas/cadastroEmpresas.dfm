@@ -2,7 +2,7 @@ object frmCadEmpresas: TfrmCadEmpresas
   Left = 0
   Top = 0
   Caption = 'Cadastro de Empresas'
-  ClientHeight = 377
+  ClientHeight = 368
   ClientWidth = 718
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,7 +19,7 @@ object frmCadEmpresas: TfrmCadEmpresas
     Left = 0
     Top = 0
     Width = 718
-    Height = 336
+    Height = 327
     Align = alClient
     DataSource = dModulo.DSCadEmpresa
     TabOrder = 0
@@ -71,7 +71,7 @@ object frmCadEmpresas: TfrmCadEmpresas
   end
   object Panel1: TPanel
     Left = 0
-    Top = 336
+    Top = 327
     Width = 718
     Height = 41
     Align = alBottom
@@ -123,6 +123,7 @@ object frmCadEmpresas: TfrmCadEmpresas
       Height = 25
       Caption = 'Sair'
       TabOrder = 4
+      OnClick = Button5Click
     end
     object Edit1: TEdit
       Left = 329

@@ -43,20 +43,6 @@ var
   flag : integer;
 begin
 
-   flag  := consultaLoginUsuarios (frmAlterarusuario.Edit3.Text);
-
-  if (flag  > 0 ) then
-
-    begin
-
-      showmessage ('Usuário já cdastrado...');
-
-     end
-
-  else
-
-   begin
-
      usu := tusuarios.Create();
 
      usu.idusuario := strtoint(frmalterarusuario.Edit1.text);
@@ -71,8 +57,7 @@ begin
 
         showmessage ('Ocorreu erro na gravação...') ;  // Final do IF
        
-    end;
-
+   
     frmalterarusuario.Close;
 
 end;

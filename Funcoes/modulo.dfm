@@ -170,4 +170,24 @@ object dModulo: TdModulo
       FieldName = 'idusuario'
     end
   end
+  object qCadCompetencia: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from Exercicios')
+    Left = 280
+    Top = 104
+    object qCadCompetenciaano: TIntegerField
+      FieldName = 'ano'
+    end
+    object qCadCompetenciames: TIntegerField
+      FieldName = 'mes'
+    end
+  end
+  object DSCadCompetencia: TDataSource
+    DataSet = qCadCompetencia
+    Left = 280
+    Top = 168
+  end
 end

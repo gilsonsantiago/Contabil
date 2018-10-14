@@ -53,9 +53,9 @@ end;
 procedure TfrmCadastro.Button2Click(Sender: TObject);
 begin
 
-    {
+
      frmAlterarUsuario.ShowModal;
-     consultaUsuarios(0) ;   }
+     consultaUsuarios(0) ;   
      
 end;
 

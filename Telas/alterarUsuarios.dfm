@@ -74,6 +74,7 @@ object frmAlterarUsuario: TfrmAlterarUsuario
       Width = 169
       Height = 21
       CharCase = ecUpperCase
+      ReadOnly = True
       TabOrder = 2
       Text = ' '
     end

@@ -7,9 +7,7 @@ uses
   modulo in 'Funcoes\modulo.pas' {dModulo: TDataModule},
   DBconfiguracao in 'Funcoes\DBconfiguracao.pas',
   Usuarios in 'Classes\Usuarios.pas',
-  AnoMes in 'Classes\AnoMes.pas',
   CadastroUsuarios in 'Telas\CadastroUsuarios.pas' {frmCadastro},
-  Competencia in 'Telas\Competencia.pas' {frmCompetencia},
   inclusaoUsuario in 'Telas\inclusaoUsuario.pas' {adicionarUsuario},
   ControleUsuarios in 'Controle\ControleUsuarios.pas',
   pdatas in 'Funcoes\pdatas.pas',
@@ -19,7 +17,11 @@ uses
   adicionarEmpresas in 'Telas\adicionarEmpresas.pas' {frmAdicionarEmpresa},
   alterarEmpresas in 'Telas\alterarEmpresas.pas' {frmAlterarEmpresa},
   controleEmpresas in 'Controle\controleEmpresas.pas',
-  Empresas in 'Classes\Empresas.pas';
+  Empresas in 'Classes\Empresas.pas',
+  competencia in 'Telas\competencia.pas' {frmCompetencia},
+  AnoMes in 'Classes\AnoMes.pas',
+  adicionarCompetencia in 'Telas\adicionarCompetencia.pas' {frmAdicionarCompetencia},
+  controleCompetencia in 'Controle\controleCompetencia.pas';
 
 {$R *.res}
 
@@ -29,11 +31,12 @@ begin
   Application.CreateForm(TfrmContabilidade, frmContabilidade);
   Application.CreateForm(TdModulo, dModulo);
   Application.CreateForm(TfrmCadastro, frmCadastro);
-  Application.CreateForm(TfrmCompetencia, frmCompetencia);
   Application.CreateForm(TadicionarUsuario, adicionarUsuario);
   Application.CreateForm(TfrmAlterarUsuario, frmAlterarUsuario);
   Application.CreateForm(TfrmCadEmpresas, frmCadEmpresas);
   Application.CreateForm(TfrmAdicionarEmpresa, frmAdicionarEmpresa);
   Application.CreateForm(TfrmAlterarEmpresa, frmAlterarEmpresa);
+  Application.CreateForm(TfrmCompetencia, frmCompetencia);
+  Application.CreateForm(TfrmAdicionarCompetencia, frmAdicionarCompetencia);
   Application.Run;
 end.

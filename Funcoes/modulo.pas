@@ -44,6 +44,10 @@ type
     qCadEmpresacidade: TWideStringField;
     qCadEmpresacnpj: TWideStringField;
     qCadEmpresaidusuario: TIntegerField;
+    qCadCompetencia: TADOQuery;
+    DSCadCompetencia: TDataSource;
+    qCadCompetenciaano: TIntegerField;
+    qCadCompetenciames: TIntegerField;
   private
     { Private declarations }
   public

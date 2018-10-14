@@ -23,6 +23,7 @@ type
     procedure Button6Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,6 +79,11 @@ end;
 procedure TfrmCadEmpresas.Button4Click(Sender: TObject);
 begin
      consultaempresa('');
+end;
+
+procedure TfrmCadEmpresas.Button5Click(Sender: TObject);
+begin
+    frmCadEmpresas.Close;
 end;
 
 procedure TfrmCadEmpresas.Button6Click(Sender: TObject);

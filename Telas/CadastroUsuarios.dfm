@@ -127,13 +127,11 @@ object frmCadastro: TfrmCadastro
       item
         Expanded = False
         FieldName = 'usuario'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'dataCadastro'
-        Width = 64
         Visible = True
       end>
   end
