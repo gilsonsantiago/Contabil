@@ -87,7 +87,7 @@ object dModulo: TdModulo
     Parameters = <>
     SQL.Strings = (
       '')
-    Left = 144
+    Left = 112
     Top = 104
     object qCadUsuarioidusuario: TAutoIncField
       Alignment = taCenter
@@ -113,7 +113,7 @@ object dModulo: TdModulo
   end
   object DSCadUsuario: TDataSource
     DataSet = qCadUsuario
-    Left = 144
+    Left = 112
     Top = 168
   end
   object ConexaoDesenvolve: TADOConnection
@@ -130,7 +130,44 @@ object dModulo: TdModulo
   object ExecutaSQLc: TADOCommand
     Connection = Conexao
     Parameters = <>
-    Left = 248
+    Left = 120
+    Top = 40
+  end
+  object DSCadEmpresa: TDataSource
+    DataSet = qCadEmpresa
+    Left = 192
+    Top = 168
+  end
+  object qCadEmpresa: TADOQuery
+    Connection = Conexao
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      '')
+    Left = 192
     Top = 104
+    object qCadEmpresaidempresa: TAutoIncField
+      FieldName = 'idempresa'
+      ReadOnly = True
+    end
+    object qCadEmpresanome: TWideStringField
+      FieldName = 'nome'
+      Size = 100
+    end
+    object qCadEmpresaendereco: TWideStringField
+      FieldName = 'endereco'
+      Size = 100
+    end
+    object qCadEmpresacidade: TWideStringField
+      FieldName = 'cidade'
+      Size = 100
+    end
+    object qCadEmpresacnpj: TWideStringField
+      FieldName = 'cnpj'
+      Size = 18
+    end
+    object qCadEmpresaidusuario: TIntegerField
+      FieldName = 'idusuario'
+    end
   end
 end

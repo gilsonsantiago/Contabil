@@ -11,6 +11,7 @@ object frmAdicionarEmpresa: TfrmAdicionarEmpresa
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -22,22 +23,21 @@ object frmAdicionarEmpresa: TfrmAdicionarEmpresa
     BevelOuter = bvLowered
     Caption = ' '
     TabOrder = 0
-    ExplicitTop = 224
-    ExplicitWidth = 185
     object Button1: TButton
       Left = 304
       Top = 6
       Width = 75
       Height = 25
-      Caption = 'Button1'
+      Caption = 'Gravar'
       TabOrder = 0
+      OnClick = Button1Click
     end
     object Button2: TButton
       Left = 390
       Top = 6
       Width = 75
       Height = 25
-      Caption = 'Button2'
+      Caption = 'Sair'
       TabOrder = 1
     end
   end
@@ -49,9 +49,6 @@ object frmAdicionarEmpresa: TfrmAdicionarEmpresa
     Align = alClient
     Caption = ' '
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitWidth = 185
-    ExplicitHeight = 105
     object Label1: TLabel
       Left = 24
       Top = 24
@@ -84,7 +81,7 @@ object frmAdicionarEmpresa: TfrmAdicionarEmpresa
       Left = 24
       Top = 149
       Width = 29
-      Height = 21
+      Height = 13
       Caption = 'CNPJ:'
     end
     object Edit1: TEdit

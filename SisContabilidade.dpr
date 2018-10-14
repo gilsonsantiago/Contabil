@@ -17,7 +17,9 @@ uses
   alterarUsuarios in 'Telas\alterarUsuarios.pas' {frmAlterarUsuario},
   cadastroEmpresas in 'Telas\cadastroEmpresas.pas' {frmCadEmpresas},
   adicionarEmpresas in 'Telas\adicionarEmpresas.pas' {frmAdicionarEmpresa},
-  alterarEmpresas in 'Telas\alterarEmpresas.pas' {frmAlterarEmpresa};
+  alterarEmpresas in 'Telas\alterarEmpresas.pas' {frmAlterarEmpresa},
+  controleEmpresas in 'Controle\controleEmpresas.pas',
+  Empresas in 'Classes\Empresas.pas';
 
 {$R *.res}
 

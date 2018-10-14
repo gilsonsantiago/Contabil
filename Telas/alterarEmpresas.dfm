@@ -3,7 +3,7 @@ object frmAlterarEmpresa: TfrmAlterarEmpresa
   Top = 0
   Caption = 'frmAlterarEmpresa'
   ClientHeight = 234
-  ClientWidth = 494
+  ClientWidth = 476
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,19 +11,18 @@ object frmAlterarEmpresa: TfrmAlterarEmpresa
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object GroupBox1: TGroupBox
     Left = 0
     Top = 0
-    Width = 494
+    Width = 476
     Height = 193
     Align = alClient
     Caption = ' '
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitWidth = 185
-    ExplicitHeight = 105
     object Label1: TLabel
       Left = 24
       Top = 24
@@ -73,6 +72,7 @@ object frmAlterarEmpresa: TfrmAlterarEmpresa
       Top = 51
       Width = 361
       Height = 21
+      ReadOnly = True
       TabOrder = 1
       Text = ' '
     end
@@ -104,29 +104,29 @@ object frmAlterarEmpresa: TfrmAlterarEmpresa
   object Panel1: TPanel
     Left = 0
     Top = 193
-    Width = 494
+    Width = 476
     Height = 41
     Align = alBottom
     BevelOuter = bvLowered
     Caption = ' '
     TabOrder = 1
-    ExplicitTop = 224
-    ExplicitWidth = 185
     object Button2: TButton
       Left = 390
       Top = 6
       Width = 75
       Height = 25
-      Caption = 'Button2'
+      Caption = 'Sair'
       TabOrder = 0
+      OnClick = Button2Click
     end
     object Button1: TButton
       Left = 304
       Top = 6
       Width = 75
       Height = 25
-      Caption = 'Button1'
+      Caption = 'Gravar'
       TabOrder = 1
+      OnClick = Button1Click
     end
   end
 end

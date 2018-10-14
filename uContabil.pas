@@ -39,7 +39,7 @@ var
   arqusu : integer;
 begin
 
-  {   Bloco desativado provisoriamente enquanto desenvolvo os modulos.
+  {   Bloco desativado provisoriamente enquanto desenvolvo os modulos.  }
 
    if conectar() then
 
@@ -91,7 +91,7 @@ begin
 
          siscontabil.Close;
 
-      end;  }
+      end; 
 
 
        frmContabilidade.ShowModal;

@@ -36,6 +36,14 @@ type
     qCadUsuariousuario: TWideStringField;
     qCadUsuariodataCadastro: TDateTimeField;
     ExecutaSQLc: TADOCommand;
+    DSCadEmpresa: TDataSource;
+    qCadEmpresa: TADOQuery;
+    qCadEmpresaidempresa: TAutoIncField;
+    qCadEmpresanome: TWideStringField;
+    qCadEmpresaendereco: TWideStringField;
+    qCadEmpresacidade: TWideStringField;
+    qCadEmpresacnpj: TWideStringField;
+    qCadEmpresaidusuario: TIntegerField;
   private
     { Private declarations }
   public

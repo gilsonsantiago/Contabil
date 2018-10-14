@@ -8,11 +8,11 @@ unit Empresas;
 
 interface
 
- type  Empresa = class
+ type  TEmpresa = class
 
   protected
 
-    fid : integer;
+    fidempresa : integer;
     fnome : string;
     fendereco : string;
     fcidade : string;
@@ -30,7 +30,7 @@ interface
     function getcidade: string;
     function getcnpj: string;
     function getendereco: string;
-    function getid: integer;
+    function getidempresa: integer;
     function getidusuario: integer;
     function getmes: integer;
     function getmesatual: integer;
@@ -41,7 +41,7 @@ interface
     procedure setcidade(const Value: string);
     procedure setcnpj(const Value: string);
     procedure setendereco(const Value: string);
-    procedure setid(const Value: integer);
+    procedure setidempresa(const Value: integer);
     procedure setidusuario(const Value: integer);
     procedure setmes(const Value: integer);
     procedure setmesatual(const Value: integer);
@@ -50,7 +50,7 @@ interface
 
   published
 
-    property id : integer read getid write setid;
+    property idempresa : integer read getidempresa write setidempresa;
     property nome : string read getnome write setnome;
     property endereco : string read getendereco write setendereco;
     property cidade : string read getcidade write setcidade;
@@ -68,52 +68,52 @@ implementation
 
 { Empresa }
 
-function Empresa.getano: integer;
+function tEmpresa.getano: integer;
 begin
      result := self.fano;
 end;
 
-function Empresa.getanoatual: integer;
+function tEmpresa.getanoatual: integer;
 begin
      result := self.fanoatual;
 end;
 
-function Empresa.getcidade: string;
+function tEmpresa.getcidade: string;
 begin
      result := self.fcidade;
 end;
 
-function Empresa.getcnpj: string;
+function tEmpresa.getcnpj: string;
 begin
      result := self.fcnpj;
 end;
 
-function Empresa.getendereco: string;
+function tEmpresa.getendereco: string;
 begin
      result := self.fendereco;
 end;
 
-function Empresa.getid: integer;
+function tEmpresa.getidempresa: integer;
 begin
-     result := self.fid;
+     result := self.fidempresa;
 end;
 
-function Empresa.getidusuario: integer;
+function tEmpresa.getidusuario: integer;
 begin
      result := self.fidusuario;
 end;
 
-function Empresa.getmes: integer;
+function tEmpresa.getmes: integer;
 begin
     result := self.fmes;
 end;
 
-function Empresa.getmesatual: integer;
+function tEmpresa.getmesatual: integer;
 begin
      result := self.fmesatual;
 end;
 
-function Empresa.getnome: string;
+function tEmpresa.getnome: string;
 begin
      result := self.fnome;
 end;
@@ -121,52 +121,52 @@ end;
 
 
 
-procedure Empresa.setano(const Value: integer);
+procedure tEmpresa.setano(const Value: integer);
 begin
      self.fano := value;
 end;
 
-procedure Empresa.setanoatual(const Value: integer);
+procedure tEmpresa.setanoatual(const Value: integer);
 begin
     self.fanoatual := value;
 end;
 
-procedure Empresa.setcidade(const Value: string);
+procedure tEmpresa.setcidade(const Value: string);
 begin
      self.fcidade := value;
 end;
 
-procedure Empresa.setcnpj(const Value: string);
+procedure tEmpresa.setcnpj(const Value: string);
 begin
      self.fcnpj := value;
 end;
 
-procedure Empresa.setendereco(const Value: string);
+procedure tEmpresa.setendereco(const Value: string);
 begin
      self.fendereco := value;
 end;
 
-procedure Empresa.setid(const Value: integer);
+procedure tEmpresa.setidempresa(const Value: integer);
 begin
-     self.fid := value;
+     self.fidempresa := value;
 end;
 
-procedure Empresa.setidusuario(const Value: integer);
+procedure tEmpresa.setidusuario(const Value: integer);
 begin
     self.fidusuario := value;
 end;
 
-procedure Empresa.setmes(const Value: integer);
+procedure tEmpresa.setmes(const Value: integer);
 begin
      self.fmes := value;
 end;
 
-procedure Empresa.setmesatual(const Value: integer);
+procedure tEmpresa.setmesatual(const Value: integer);
 begin
      self.fmesatual := value;
 end;
 
-procedure Empresa.setnome(const Value: string);
+procedure tEmpresa.setnome(const Value: string);
 begin
      self.fnome := value;
 end;
