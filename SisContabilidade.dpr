@@ -21,7 +21,8 @@ uses
   competencia in 'Telas\competencia.pas' {frmCompetencia},
   AnoMes in 'Classes\AnoMes.pas',
   adicionarCompetencia in 'Telas\adicionarCompetencia.pas' {frmAdicionarCompetencia},
-  controleCompetencia in 'Controle\controleCompetencia.pas';
+  controleCompetencia in 'Controle\controleCompetencia.pas',
+  inclusaodeCompetencias in 'Telas\inclusaodeCompetencias.pas' {frmincluirCompetencia};
 
 {$R *.res}
 
@@ -38,5 +39,6 @@ begin
   Application.CreateForm(TfrmAlterarEmpresa, frmAlterarEmpresa);
   Application.CreateForm(TfrmCompetencia, frmCompetencia);
   Application.CreateForm(TfrmAdicionarCompetencia, frmAdicionarCompetencia);
+  Application.CreateForm(TfrmincluirCompetencia, frmincluirCompetencia);
   Application.Run;
 end.

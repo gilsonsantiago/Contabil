@@ -11,6 +11,7 @@ uses
 implementation
 
 function  consultaCompetencia ( cano, cmes : integer)  : boolean;
+
 begin
 
  if (cano = 0) and (cmes = 0)  then
