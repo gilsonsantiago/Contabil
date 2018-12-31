@@ -1,3 +1,9 @@
+{****************************************************************************
+ *  Cadastro de Entes e ou Empresas
+ *  Autor: Gilson Santiago
+ *  Data:  01 de dezembro de 2018.
+ ********************************************************}
+
 unit cadastroEmpresas;
 
 interface

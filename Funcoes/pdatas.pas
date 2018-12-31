@@ -188,6 +188,18 @@ begin
 	
 end;
 
+ 
+  
+{****************************************************************************
+ *  Funçao que valida a data
+ *  Formato :  
+ *  Autor: Gilson Santiago
+ *  Atualizada em Data:  29 de setembro de 2018
+ ********************************************************}
+
+
+
+
 FUNCTION valida_data ( data1: string) : boolean;
 var
   ndia, nmes : integer;

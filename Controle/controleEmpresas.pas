@@ -19,11 +19,12 @@ uses
   function  gravarEmpresa    ( empe : Tempresa ) : boolean;
   function  alteracaoEmpresa ( empe : tempresa) : boolean;
   function  exclusaoEmpresa  ( idempe : integer) : boolean;
+  Function  FecharempresaDB : boolean;
 
 
 implementation
 
-
+  
 function  consultaEmpresa ( nomeempresa : string)  : boolean;
 begin
 
@@ -47,7 +48,7 @@ begin
 
    begin
 
-     dmodulo.qCadEmpresa.close;
+      dmodulo.qCadEmpresa.close;
 
       dmodulo.qCadEmpresa.sql.clear;
 
@@ -65,6 +66,32 @@ begin
 
 
 end;
+
+
+
+{****************************************************************************
+ *  Fechar a tabela de Empresa
+ *  usando:   parametro 0 =  todos registro  -  1 - uma busca do codigo
+ *  Autor: Gilson Santiago
+ *  Data:  14 de outubro de 2018
+ ********************************************************}
+
+Function FecharempresaDB : boolean;
+begin
+
+   try
+   
+     dmodulo.qCadEmpresa.close;
+	 
+	 result := true;
+   
+   except
+   
+     result := false;
+   end;
+
+end;
+
 
 
 

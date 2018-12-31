@@ -18,6 +18,7 @@ uses sysutils, inifiles, Messages, Dialogs, modulo;
  Function lerNomeBanco : string;
  Function lerEndereco  : string;
  Function Conectar     : boolean;
+ Function DesConectar  : boolean;
 
 implementation
 
@@ -141,5 +142,23 @@ end;
       
  end;
 
+ 
+ 
+ 
+ {***********************************************
+  *  DesConectar com o banco de dados cadastrado
+  *	 
+  *
+  ********************************************************} 
+ 
+Function DesConectar : boolean; 
+begin
 
+    dmodulo.Conexao.Connected := false;
+	
+	result := false;
+	
+end;
+ 
+ 
 end.

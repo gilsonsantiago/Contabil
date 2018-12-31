@@ -124,8 +124,8 @@ object dModulo: TdModulo
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 432
-    Top = 32
+    Left = 368
+    Top = 16
   end
   object ExecutaSQLc: TADOCommand
     Connection = Conexao
